@@ -595,7 +595,7 @@ gtag('consent','default',{ad_storage:'denied',analytics_storage:'denied',
 
 ## Care about bugs ?
 
-  - [Sentry](https://sentry.io/) is still the default for frontend errors + perf + replay. Self-hosted lighter options: GlitchTip (Sentry-SDK compatible, no session replay, no source-map processing), Bugsink. PostHog if you want errors next to replays and flags.
+  - [Sentry](https://sentry.io/) is still the default for frontend errors + perf + replay. Self-hosted lighter options: GlitchTip (Sentry-SDK compatible, no session replay, no source-map processing), Bugsink, [Telemetry Tracker](https://github.com/Telemetry-Tracker/telemetry-tracker) (MIT, JS/TS, source maps + alerts). PostHog if you want errors next to replays and flags.
   - Upload source maps in CI or your stack traces are noise: https://docs.sentry.io/platforms/javascript/sourcemaps/
   - Catch what SDKs miss: `window.addEventListener("error", …)`, `"unhandledrejection"`, and `reportError(e)` inside `catch` blocks so handled errors still reach `window.onerror`.
   - Session replay is the highest-risk data type you will ever collect: mask by default (`maskAllText`, `blockAllMedia`), allowlist rather than blocklist, sample low, and declare it in the privacy policy.
