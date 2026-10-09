@@ -165,6 +165,7 @@ Canonical: https://example.com/.well-known/security.txt
     - [LinkedIn Post Inspector](https://www.linkedin.com/post-inspector/) — no login, forces a cache purge
     - [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/) — needs a FB developer account, "Scrape Again" is still the only FB cache purge
     - [opengraph.xyz](https://www.opengraph.xyz/) — no-login multi-platform preview
+    - [ShareScan](https://sharescan.io/scan) — check metadata and image URLs across up to 10 public pages without an account; include one URL from each page template after a release.
     - X: no validator anymore, post the link from a test account
   - Don't add share buttons. Third-party JS + trackers + CSP headaches for a link you can hand-write: `https://x.com/intent/post?url=…`, `https://bsky.app/intent/compose?text=…`, `mailto:`.
 
