@@ -251,6 +251,7 @@ Allow: /
 <meta name="robots" content="max-snippet:-1, max-image-preview:large" />
 ```
   - Enforcement lives at the edge, not in a text file: [Cloudflare AI Crawl Control](https://developers.cloudflare.com/ai-crawl-control/) classifies bots as Search / Agent / Training and blocks per category. If you *want* AI referrals, check you haven't been opted out by a default.
+  - Test what the bots actually get, not just the file: [BotView](https://botview.app/ai-crawler-checker) reads your robots.txt and requests the page as 18 AI crawlers, showing the rule or HTTP status that decides each one (free, no signup).
   - `llms.txt` — be honest: **no AI provider has confirmed reading it**, Google said publicly it doesn't support it, and log studies show near-zero crawler requests. Its one real use is developer tooling (Cursor, MCP clients) pointed at your docs on purpose. Ship it if it costs nothing, expect no citation lift. https://llmstxt.org/
   - Cloudflare's `Content-Signal` in robots.txt is a declarative rights reservation. No crawler is known to honor it yet — treat it as a legal statement, not enforcement. https://contentsignals.org/
 ```
