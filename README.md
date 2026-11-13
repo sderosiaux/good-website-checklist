@@ -160,7 +160,7 @@ Canonical: https://example.com/.well-known/security.txt
 ```html
 <link rel="alternate" type="application/json+oembed" href="https://example.com/oembed?url=...&format=json">
 ```
-  - Generate OG images dynamically instead of hand-designing them: [@vercel/og](https://vercel.com/docs/og-image-generation) (Satori → SVG → resvg → PNG), `workers-og` on Cloudflare, or plain `satori` + `@resvg/resvg-js` at build time. Satori is flexbox-only, no CSS grid.
+  - Generate OG images dynamically instead of hand-designing them: [@vercel/og](https://vercel.com/docs/og-image-generation) (Satori → SVG → resvg → PNG), `workers-og` on Cloudflare, plain `satori` + `@resvg/resvg-js` at build time, or render your own HTML template to PNG with a screenshot API such as [CurlShot](https://curlshot.com/tools/open-graph-image-generator) (hosted, free tier). Satori is flexbox-only, no CSS grid.
   - Validators that still work
     - [LinkedIn Post Inspector](https://www.linkedin.com/post-inspector/) — no login, forces a cache purge
     - [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/) — needs a FB developer account, "Scrape Again" is still the only FB cache purge
