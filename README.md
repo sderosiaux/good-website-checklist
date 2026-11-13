@@ -611,7 +611,7 @@ Content-Security-Policy-Report-Only: default-src 'self'; report-to csp
 
 ## Care about ops ?
 
-  - Uptime and synthetics: [Better Stack](https://betterstack.com/uptime) · [Checkly](https://www.checklyhq.com/) (Playwright-as-monitor) · self-hosted [Uptime Kuma](https://github.com/louislam/uptime-kuma) · [SolidPing](https://github.com/fclairamb/solidping) (open source, self-hosted or hosted)
+  - Uptime and synthetics: [Better Stack](https://betterstack.com/uptime) · [Checkly](https://www.checklyhq.com/) (Playwright-as-monitor) · self-hosted [Uptime Kuma](https://github.com/louislam/uptime-kuma) · [SolidPing](https://github.com/fclairamb/solidping) (open source, self-hosted or hosted) · [exit1.dev](https://exit1.dev/) (free tier, also domain, TLS and DNS checks)
   - Status page: statuspage.io is now the expensive incumbent with no built-in monitoring. [Instatus](https://instatus.com/) (free tier) · [OpenStatus](https://www.openstatus.dev/) (open source, self-hostable, Terraform provider) · Better Stack (monitoring + status bundled).
   - CI gates worth wiring, one per section above: [perf budget](#care-about-performance-), [a11y](#care-about-accessibility-a11y-), HTML validation, link check, bundle size. A checklist nobody runs is a blog post.
   - Link rot: [lychee](https://github.com/lycheeverse/lychee) (Rust, fast) via `lycheeverse/lychee-action@v2` on a cron, with `--cache --max-cache-age 1d` and a `.lycheeignore`.
