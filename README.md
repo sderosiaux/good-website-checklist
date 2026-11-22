@@ -129,6 +129,7 @@ Canonical: https://example.com/.well-known/security.txt
     - https://developer.mozilla.org/en-US/observatory — Mozilla Observatory moved here, deepest free header scan
     - https://securityheaders.com still works for one-off scans, but it's Snyk-owned now and its API shut down in April 2026 — don't wire it into CI
     - https://internet.nl for TLS/DNSSEC/IPv6/mail standards, https://webbkoll.5july.net for third-party tracking
+    - https://aguard.lt/en/check also requests the files that should never be public (`/.git/`, `/.env`, `wp-config.php.bak`, SQL dumps) and checks the MX host against Spamhaus; passive, no signup. In a survey of 73k `.lt` sites the most common leak was a readable `debug.log` (1,123 sites), then `composer.json` and downloadable backups: https://aguard.lt/en/data/exposed-files
 
 ## Care about social ?
 
