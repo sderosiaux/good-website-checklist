@@ -578,7 +578,7 @@ reg.addEventListener("updatefound", () => {           // reg.waiting is still nu
 
 ## Care about analytics ?
 
-  - Pick a first-party, cookieless tool: [Plausible](https://plausible.io) (AGPL, self-hostable) · [Umami](https://umami.is) (MIT) · [Matomo](https://matomo.org) · [Fathom](https://usefathom.com) · [Simple Analytics](https://www.simpleanalytics.com) · [Pirsch](https://pirsch.io) · [GoatCounter](https://www.goatcounter.com) · [Cloudflare Web Analytics](https://www.cloudflare.com/web-analytics/) (free, includes CWV)
+  - Pick a first-party, cookieless tool: [Plausible](https://plausible.io) (AGPL, self-hostable) · [TrustAnalytics](https://www.trustcomponent.com/en/products/analytics) (EU-hosted, cookieless by default) · [Umami](https://umami.is) (MIT) · [Matomo](https://matomo.org) · [Fathom](https://usefathom.com) · [Simple Analytics](https://www.simpleanalytics.com) · [Pirsch](https://pirsch.io) · [GoatCounter](https://www.goatcounter.com) · [Cloudflare Web Analytics](https://www.cloudflare.com/web-analytics/) (free, includes CWV)
   - Zero-JS option: parse your access logs with [GoAccess](https://goaccess.io) — `goaccess access.log -o report.html --log-format=COMBINED --anonymize-ip`
   - Proxy the analytics script from your own domain (`/js/script.js` → vendor): 25-45% of traffic blocks known analytics hostnames.
   - **Cookieless ≠ consent-exempt.** France's CNIL retired its approved-tool list on 1 Jan 2026 and replaced it with vendor self-assessment against a published grid. The exemption criteria are cumulative: own-site measurement only, anonymous aggregates, no third-party transfer, no cross-site tracking, cookie ≤13 months, data ≤25 months. https://www.cnil.fr/fr/cookies-solutions-pour-les-outils-de-mesure-daudience
