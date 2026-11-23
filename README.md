@@ -102,7 +102,7 @@ Integrity-Policy: blocked-destinations=(script style), endpoints=(ip-endpoint)
 <input name="username" autocomplete="username webauthn">
 ```
   - Feature-detect with `PublicKeyCredential.isConditionalMediationAvailable()`, and prompt for passkey creation right *after* a successful password login, never behind a separate button.
-  - **Bots/abuse**: [Cloudflare Turnstile](https://www.cloudflare.com/products/turnstile/) is the sane default (free, no cookies, invisible, no consent headache). reCAPTCHA now needs a GCP billing account and only 10k free assessments/month. Pair either with server-side rate limiting per IP *and* per account — a CAPTCHA is not a rate limiter.
+  - **Bots/abuse**: [Cloudflare Turnstile](https://www.cloudflare.com/products/turnstile/) is the sane default (free, no cookies, invisible, no consent headache). For EU hosting: [TrustCaptcha](https://www.trustcomponent.com/en/products/captcha) (no cookies, invisible, proof-of-work and bot score). reCAPTCHA now needs a GCP billing account and only 10k free assessments/month. Pair either with server-side rate limiting per IP *and* per account — a CAPTCHA is not a rate limiter.
   - **Supply chain**, where sites actually get owned in 2026 (Shai-Hulud npm worms)
     - cooldown on new versions, so a compromised release expires before it reaches your lockfile — mind the units, they differ: pnpm 11 `minimumReleaseAge` (minutes, defaults to `1440`), Yarn 4.15 `npmMinimalAgeGate` (minutes or `"1d"`, defaults to `1d`), npm 11.10 `--min-release-age` (**days**, still opt-in). pnpm silently falls back to the last old-enough version, npm and Yarn fail instead.
     - `npm ci` only, lockfile committed, `ignore-scripts=true` with a short allowlist for packages that genuinely need postinstall
