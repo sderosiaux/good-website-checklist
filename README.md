@@ -618,6 +618,7 @@ Content-Security-Policy-Report-Only: default-src 'self'; report-to csp
   - 404s: a real page with search + top links (not a redirect to `/`), the correct 404 status, and monitor your top 404 paths — they're broken inbound links you can 301.
   - A backup you have never restored is not a backup: schedule a real restore drill, keep one copy off-provider, and check it covers the DB *and* user uploads. Rehearse the rollback too — knowing how to revert a bad deploy in one command beats any amount of pre-deploy checking.
   - Monitor the things that take the whole site down and aren't in your repo: domain expiry, TLS cert expiry, DNS record drift and registrar lock. Most uptime monitors do all four.
+  - For a one-off look before you pick a monitor: https://sitehealthradar.com/tools/website-check/ looks at a site from outside and reports whether it loads, whether the certificate is good, when the domain registration runs out and which common security headers are missing (free, no account)
   - Feature flags to decouple deploy from release: [OpenFeature](https://openfeature.dev/) (vendor-neutral SDK spec), self-hosted Unleash/Flagsmith, or PostHog if you already have it.
 
 ## Care about misc ?
